@@ -27,11 +27,20 @@ body{
 .main-nav a{margin-left:18px;color:var(--text);text-decoration:none;transition:color .2s ease}
 .nav-dropdown{position:relative;display:inline-flex;align-items:center;margin-left:18px}
 .nav-trigger{background:transparent;border:0;font:inherit;color:var(--text);cursor:pointer;transition:color .2s ease;padding:6px 0}
-.dropdown-menu{position:absolute;top:calc(100% + 10px);left:-10px;min-width:220px;background:#ffffff;border:1px solid rgba(2,6,23,0.08);border-radius:10px;box-shadow:0 12px 30px rgba(2,6,23,0.12);padding:8px;display:grid;gap:4px;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:20}
+.nav-dropdown .nav-trigger{margin-left:0;text-decoration:none;display:inline-flex;align-items:center}
+.dropdown-menu{position:absolute;top:calc(100% + 10px);left:-10px;min-width:220px;background:#ffffff;border:1px solid rgba(2,6,23,0.08);border-radius:10px;box-shadow:0 12px 30px rgba(2,6,23,0.12);padding:8px;display:grid;gap:6px;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .18s ease,transform .18s ease;z-index:3000}
 .dropdown-menu a{margin:0;padding:8px 10px;border-radius:8px;color:var(--text);text-decoration:none}
 .dropdown-menu a:hover{background:rgba(14,165,233,0.12)}
 .nav-dropdown:focus-within .dropdown-menu,.nav-dropdown:hover .dropdown-menu{opacity:1;transform:translateY(0);pointer-events:auto}
-.site-header{position:relative;z-index:10;backdrop-filter:saturate(120%) blur(6px);background:rgba(255,255,255,0.6);border-bottom:1px solid rgba(2,6,23,0.04)}
+.nav-dropdown .dropdown-menu a{display:block}
+.site-header{position:relative;z-index:2000;backdrop-filter:saturate(120%) blur(6px);background:rgba(255,255,255,0.6);border-bottom:1px solid rgba(2,6,23,0.04)}
+
+/* Projects page larger cards + gallery preview */
+.projects .grid{grid-template-columns:repeat(2,1fr);gap:28px}
+.projects .card{min-height:320px}
+.projects .card-media{padding:16px;background:linear-gradient(135deg,#f8fafc,#eef6ff);border-bottom:1px solid rgba(2,6,23,0.06)}
+.projects .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.projects .thumbs svg{width:100%;height:80px;border-radius:8px;display:block}
 
 /* Hero */
 .hero{padding:64px 0;min-height:calc(100vh - 72px);display:flex;align-items:center}
@@ -102,6 +111,7 @@ main > section{animation:fadeUp .6s ease both}
   .hero-inner{flex-direction:column}
   .hero-mockup{width:100%;flex:auto}
   .grid{grid-template-columns:repeat(2,1fr)}
+  .projects .grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
 }
 @media (max-width:600px){

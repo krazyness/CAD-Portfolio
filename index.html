@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brody Dai's CAD Portfolio</title>
+  <meta name="description" content="Brody Dai's CAD portfolio showcasing mechanical, architectural, and product designs.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Brody Dai's CAD Portfolio</a>
+      <nav class="main-nav">
+        <div class="nav-dropdown">
+          <button class="nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">Projects ▾</button>
+          <div class="dropdown-menu">
+            <a href="projects.html">All Categories</a>
+            <a href="projects-geometric.html">Geometric Constructions</a>
+            <a href="projects-orthographic.html">Orthographic Projections</a>
+            <a href="projects-section-views.html">Section Views</a>
+            <a href="projects-auxiliary-views.html">Auxiliary Views</a>
+          </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-mockup" aria-hidden="true">
+          <!-- Simple SVG placeholder for CAD model thumbnail -->
+          <svg width="420" height="260" viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" role="img">
+            <rect width="100%" height="100%" rx="8" fill="#0f172a" />
+            <g transform="translate(30,30)" stroke="#8b9ab0" stroke-width="2" fill="none">
+              <rect x="0" y="0" width="360" height="200" rx="6" />
+              <path d="M0,160 L120,80 L240,160 L360,80" stroke-linecap="round" />
+              <circle cx="60" cy="40" r="6" fill="#cce6ff" />
+              <circle cx="300" cy="120" r="8" fill="#ffd6a5" />
+            </g>
+          </svg>
+        </div>
+        <div class="hero-copy">
+          <h1>Brody Dai's CAD Portfolio</h1>
+          <p class="cta-row">
+            <a class="btn primary" href="projects.html">View Projects</a>
+            <a class="btn ghost" href="#about">About Me</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I am a CAD designer with experience in mechanical engineering and architectural visualization. I use tools like SolidWorks, Fusion 360, Rhino, and AutoCAD to produce detailed models, assemblies, and fabrication-ready drawings.</p>
+            <ul>
+              <li>Expertise: CAD modeling, assemblies, GD&T, drawing production</li>
+              <li>Industries: Product design, architecture, manufacturing</li>
+              <li>Formats: STEP, IGES, DWG, STL</li>
+            </ul>
+            <p>Interested in collaborating? I take freelance and contract work for prototyping, design for manufacture, and visualization.</p>
+          </div>
+          <div class="about-media">
+            <div class="about-image" aria-hidden="true">
+              <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img">
+                <rect width="320" height="320" rx="16" fill="#0b1220" />
+                <circle cx="160" cy="132" r="56" fill="#cfeafe" />
+                <rect x="60" y="210" width="200" height="60" rx="12" fill="#9fbfdf" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="resume-preview">
+          <h3 class="section-title">Brody's CAD Resume</h3>
+          <div class="resume-frame">
+            <iframe title="Brody's CAD Resume" src="assets/info/Brodys-CAD-Resume.pdf"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">You can reach me at:</p>
+        <p class="contact-info"><strong>Email:</strong> <a href="mailto:brodyxdai@gmail.com">brodyxdai@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© 2026 Brody Dai</small>
+    </div>
+  </footer>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const id = link.getAttribute('href');
+          if (!id || id.length < 2) return;
+          const target = document.querySelector(id);
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    </script>
+</body>
+</html>
